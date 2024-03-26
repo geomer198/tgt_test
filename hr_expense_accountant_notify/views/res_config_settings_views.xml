@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.hr.expense.accountant.notify</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr_expense.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="hr_payroll_accountant" position="before">
+                <div
+                    class="col-lg-6 col-12 o_setting_box"
+                    id="hr_expense_accountant_notify"
+                >
+                    <div class="o_setting_left_pane" />
+                    <div class="o_setting_right_pane">
+                        <label for="accountant_user_id" string="Accountant User" />
+                        <div class="text-muted">
+                            Notification of the responsible accountant of the newly agreed document
+                        </div>
+                        <div class="row mt8">
+                            <field name="accountant_user_id" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>
